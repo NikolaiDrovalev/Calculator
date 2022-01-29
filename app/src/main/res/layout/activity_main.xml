@@ -7,47 +7,84 @@
     android:columnCount="4"
     tools:context=".MainActivity">
 
-    <Button android:text="@string/delete_everything" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/delete_everything" />
 
-    <Button android:text="@string/delete_one_sign" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/delete_one_sign" />
 
-    <Button android:text="@string/percent" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/percent" />
 
-    <Button android:text="@string/divide" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/divide" />
 
-    <Button android:text="@string/one" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/one" />
 
-    <Button android:text="@string/two" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/two" />
 
-    <Button android:text="@string/three" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/three" />
 
-    <Button android:text="@string/multiply" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/multiply" />
 
-    <Button android:text="@string/four" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/four" />
 
-    <Button android:text="@string/five" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/five" />
 
-    <Button android:text="@string/six" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/six" />
 
-    <Button android:text="@string/minus" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/minus" />
 
-    <Button android:text="@string/seven" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/seven" />
 
-    <Button android:text="@string/eight" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/eight" />
 
-    <Button android:text="@string/nine" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/nine" />
 
-    <Button android:text="@string/plus" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/plus" />
 
-    <Button android:text="@string/zero" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/zero" />
 
-    <Button android:text="@string/point" />
+    <Button
+        android:layout_margin="@dimen/button_padding"
+        android:text="@string/point" />
 
     <Button
         android:layout_row="4"
         android:layout_column="2"
         android:layout_columnSpan="2"
         android:layout_gravity="fill"
+        android:layout_margin="@dimen/button_padding"
         android:text="@string/equals" />
 
 
