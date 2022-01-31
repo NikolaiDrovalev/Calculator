@@ -8,12 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:textAlignment="viewEnd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_text"
+        android:text="РРРРРРРР"
         android:id="@+id/first_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_text"
         app:layout_constraintBottom_toTopOf="@+id/second_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,12 +23,13 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:textAlignment="viewEnd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_text"
+        android:text="РРРРРРРР"
         android:id="@+id/second_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_text"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,6 +38,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
+        android:text="РРРРРРРР"
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,6 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="UselessParent">
 
 
