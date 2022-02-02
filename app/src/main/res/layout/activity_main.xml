@@ -7,217 +7,305 @@
     android:background="@drawable/background_calculator"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:text="РРРРРРРР"
-        android:id="@+id/first_number"
+        android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
-        android:textSize="@dimen/size_text"
-        app:layout_constraintBottom_toTopOf="@+id/second_number"
+        android:textSize="@dimen/size_text_answer"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:text="РРРРРРРР"
-        android:id="@+id/second_number"
+    <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="viewEnd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_text"
-        app:layout_constraintBottom_toTopOf="@+id/result"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:text="РРРРРРРР"
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="viewEnd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_text"
-        app:layout_constraintBottom_toTopOf="@+id/grid_one"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <GridLayout
-        android:id="@+id/grid_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:columnCount="4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="UselessParent">
-
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/delete_everything"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/orangeRed"
+            android:onClick="numbers"
             android:text="@string/delete_everything"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/delete_one_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/orangeRed"
+            android:onClick="numbers"
             android:text="@string/delete_one_sign"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:onClick="numbers"
             android:text="@string/percent"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:onClick="numbers"
             android:text="@string/divide"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/navy"
-            android:text="@string/one"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
-            android:text="@string/two"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
-            android:text="@string/three"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/maroon"
-            android:text="@string/multiply"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
-            android:text="@string/four"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
-            android:text="@string/five"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
-            android:text="@string/six"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/maroon"
-            android:text="@string/minus"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
-
-        <Button
-            android:layout_margin="@dimen/button_padding"
-            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
             android:text="@string/seven"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:onClick="numbers"
             android:text="@string/eight"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:onClick="numbers"
             android:text="@string/nine"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:onClick="numbers"
+            android:text="@string/multiply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/four"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/five"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/six"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/maroon"
+            android:onClick="numbers"
             android:text="@string/plus"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/one"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/two"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
+            android:text="@string/three"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/maroon"
+            android:onClick="numbers"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navy"
+            android:onClick="numbers"
             android:text="@string/zero"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:onClick="numbers"
             android:text="@string/point"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_text"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/size_text" />
 
         <Button
-            android:layout_row="4"
-            android:layout_column="2"
-            android:layout_columnSpan="2"
-            android:layout_gravity="fill"
+            android:id="@+id/equals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
+            android:layout_weight="2"
             android:backgroundTint="@color/red"
+            android:onClick="numbers"
             android:text="@string/equals"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-    </GridLayout>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

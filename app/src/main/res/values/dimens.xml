@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_padding">5dp</dimen>
-    <dimen name="size_text">25sp</dimen>
+    <dimen name="size_text">20sp</dimen>
+    <dimen name="size_text_answer">50sp</dimen>
 </resources>
