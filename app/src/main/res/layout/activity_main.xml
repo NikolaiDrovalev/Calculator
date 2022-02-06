@@ -29,49 +29,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_everything"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/orangeRed"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/delete_everything"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_one_sign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/orangeRed"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/delete_one_sign"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/percent"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/divide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/divide"
             android:textColor="@color/white"
@@ -89,49 +97,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/seven"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/eight"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/nine"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/multiply"
             android:textColor="@color/white"
@@ -149,49 +165,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/four"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/five"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/six"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/plus"
             android:textColor="@color/white"
@@ -209,49 +233,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/one"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/two"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/three"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/maroon"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/minus"
             android:textColor="@color/white"
@@ -269,37 +301,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/zero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/zero"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="1"
             android:backgroundTint="@color/navy"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/point"
             android:textColor="@color/white"
             android:textSize="@dimen/size_text" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_padding"
             android:layout_weight="2"
             android:backgroundTint="@color/red"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:onClick="numbers"
             android:text="@string/equals"
             android:textColor="@color/white"
