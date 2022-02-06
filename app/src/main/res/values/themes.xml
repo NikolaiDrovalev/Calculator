@@ -13,4 +13,44 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Red" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/orangeRed</item>
+        <item name="colorPrimaryVariant">@color/DarkRed</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/Red</item>
+        <item name="colorSecondaryVariant">@color/Crimson</item>
+        <item name="colorOnSecondary">@color/LightCoral</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Green" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/LimeGreen</item>
+        <item name="colorPrimaryVariant">@color/DarkGreen</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/LimeGreen</item>
+        <item name="colorSecondaryVariant">@color/MediumSpringGreen</item>
+        <item name="colorOnSecondary">@color/PaleGreen</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Blue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryVariant">@color/MidnightBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/Blue</item>
+        <item name="colorSecondaryVariant">@color/DeepSkyBlue</item>
+        <item name="colorOnSecondary">@color/PowderBlue</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="buttons">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">@dimen/size_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/button_padding</item>
+    </style>
+
 </resources>

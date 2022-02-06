@@ -3,26 +3,36 @@ package ru.geekbrains.calculator;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView screen;
-    String newScreen;
     final static String screenKey = "key";
+    private static final String PREF_NAME = "key_pref";
+    private static final String PREF_THEME_KEY = "key_pref_theme";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         screen = findViewById(R.id.screen);
+
+        ((RadioButton) findViewById(R.id.radioButtonDefault)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonRed)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonGreen)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonBlue)).setOnClickListener(this);
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle savedInstanceState){
+    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString(screenKey, screen.getText().toString());
     }
@@ -96,5 +106,37 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         screen.setText(number);
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case (R.id.radioButtonDefault):
+                setAppTheme(R.style.Theme_Calculator);
+                break;
+            case (R.id.radioButtonRed):
+                setAppTheme(R.style.Theme_Red);
+                break;
+            case (R.id.radioButtonGreen):
+                setAppTheme(R.style.Theme_Green);
+                break;
+            case (R.id.radioButtonBlue):
+                setAppTheme(R.style.Theme_Blue);
+                break;
+        }
+        recreate();
+    }
+
+    protected void setAppTheme(int codeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(PREF_THEME_KEY, codeStyle);
+        editor.apply();
+    }
+
+    protected int getAppTheme() {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPref.getInt(PREF_THEME_KEY, R.style.Theme_Calculator);
     }
 }

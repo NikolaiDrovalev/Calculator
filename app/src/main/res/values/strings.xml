@@ -19,5 +19,9 @@
     <string name="percent">%</string>
     <string name="delete_one_sign">⌫</string>
     <string name="delete_everything">AC</string>
+    <string name="theme_default">Основная тема</string>
+    <string name="theme_blue">Синяя тема</string>
+    <string name="theme_red">Красная тема</string>
+    <string name="theme_green">Зелёная тема</string>
 
 </resources>
