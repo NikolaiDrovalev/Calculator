@@ -15,17 +15,17 @@
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
         android:textSize="@dimen/size_text_answer"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_five"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout5"
+        android:id="@+id/linearLayout_five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="4"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_four"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -56,7 +56,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayout_four"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -123,7 +123,8 @@
             android:id="@+id/plus"
             style="@style/buttons"
             android:layout_weight="1"
-            android:text="@string/plus" />
+            android:text="@string/plus"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
@@ -159,7 +160,8 @@
             android:id="@+id/minus"
             style="@style/buttons"
             android:layout_weight="1"
-            android:text="@string/minus" />
+            android:text="@string/minus"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
@@ -189,52 +191,29 @@
             android:id="@+id/equals"
             style="@style/buttons"
             android:layout_weight="2"
-            android:text="@string/equals" />
+            android:text="@string/equals"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
-    <RadioGroup
+    <LinearLayout
+        android:id="@+id/linearLayout_six"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="4"
         app:layout_constraintBottom_toTopOf="@+id/screen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settings"
+            style="@style/buttons"
             android:layout_weight="1"
-            android:text="@string/theme_default"
-            android:textColor="@color/white" />
+            android:text="@string/settings"
+            tools:ignore="TextContrastCheck"
+            android:layout_width="0dp" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonRed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/theme_red"
-            android:textColor="@color/Red" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonGreen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/theme_green"
-            android:textColor="@color/LimeGreen" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonBlue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/theme_blue"
-            android:textColor="@color/DeepSkyBlue" />
-    </RadioGroup>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

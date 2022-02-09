@@ -23,5 +23,6 @@
     <string name="theme_blue">Синяя тема</string>
     <string name="theme_red">Красная тема</string>
     <string name="theme_green">Зелёная тема</string>
+    <string name="settings">Настройки</string>
 
 </resources>

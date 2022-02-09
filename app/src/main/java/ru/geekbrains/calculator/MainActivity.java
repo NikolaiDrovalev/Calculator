@@ -1,29 +1,33 @@
 package ru.geekbrains.calculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView screen;
-    final static String screenKey = "key";
-    private static final String PREF_NAME = "key_pref";
-    private static final String PREF_THEME_KEY = "key_pref_theme";
-
+    static final String SCREEN_KEY_ONE = "keyOne";
+    static final String SCREEN_KEY_TWO = "keyTwo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setTheme(getAppTheme());
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        screen.setText(getScreenSave());
+    }
+
+    protected int getAppTheme() {
+        SharedPreferences sharedPref = getSharedPreferences(SecondActivity.PREF_NAME, MODE_PRIVATE);
+        return sharedPref.getInt(SecondActivity.PREF_THEME_KEY, R.style.Theme_Calculator);
     }
 
     public void initView() {
@@ -49,22 +53,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.delete_one_sign).setOnClickListener(this);
         findViewById(R.id.delete_everything).setOnClickListener(this);
 
-        findViewById(R.id.radioButtonDefault).setOnClickListener(this);
-        findViewById(R.id.radioButtonRed).setOnClickListener(this);
-        findViewById(R.id.radioButtonGreen).setOnClickListener(this);
-        findViewById(R.id.radioButtonBlue).setOnClickListener(this);
-    }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putString(screenKey, screen.getText().toString());
-    }
-
-    @Override
-    public void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        screen.setText(savedInstanceState.getString(screenKey));
+        findViewById(R.id.settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -131,33 +127,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         screen.setText(number);
-
-        switch (view.getId()) {
-            case (R.id.radioButtonDefault):
-                setAppTheme(R.style.Theme_Calculator);
-                break;
-            case (R.id.radioButtonRed):
-                setAppTheme(R.style.Theme_Red);
-                break;
-            case (R.id.radioButtonGreen):
-                setAppTheme(R.style.Theme_Green);
-                break;
-            case (R.id.radioButtonBlue):
-                setAppTheme(R.style.Theme_Blue);
-                break;
-        }
-        recreate();
+        setScreenSave(screen.getText().toString());
     }
 
-    protected void setAppTheme(int codeStyle) {
-        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+    protected void setScreenSave(String screenSave) {
+        SharedPreferences sharedPref = getSharedPreferences(SCREEN_KEY_ONE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(PREF_THEME_KEY, codeStyle);
+        editor.putString(SCREEN_KEY_TWO, screenSave);
         editor.apply();
     }
 
-    protected int getAppTheme() {
-        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return sharedPref.getInt(PREF_THEME_KEY, R.style.Theme_Calculator);
+    protected String getScreenSave() {
+        SharedPreferences sharedPref = getSharedPreferences(SCREEN_KEY_ONE, MODE_PRIVATE);
+        return sharedPref.getString(SCREEN_KEY_TWO, screen.getText().toString());
     }
 }
