@@ -1,14 +1,14 @@
 package ru.geekbrains.calculator;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,12 +23,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
+        initView();
+    }
+
+    public void initView() {
         screen = findViewById(R.id.screen);
 
-        ((RadioButton) findViewById(R.id.radioButtonDefault)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonRed)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonGreen)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonBlue)).setOnClickListener(this);
+        findViewById(R.id.zero).setOnClickListener(this);
+        findViewById(R.id.one).setOnClickListener(this);
+        findViewById(R.id.two).setOnClickListener(this);
+        findViewById(R.id.three).setOnClickListener(this);
+        findViewById(R.id.four).setOnClickListener(this);
+        findViewById(R.id.five).setOnClickListener(this);
+        findViewById(R.id.six).setOnClickListener(this);
+        findViewById(R.id.seven).setOnClickListener(this);
+        findViewById(R.id.eight).setOnClickListener(this);
+        findViewById(R.id.nine).setOnClickListener(this);
+        findViewById(R.id.point).setOnClickListener(this);
+        findViewById(R.id.equals).setOnClickListener(this);
+        findViewById(R.id.plus).setOnClickListener(this);
+        findViewById(R.id.minus).setOnClickListener(this);
+        findViewById(R.id.multiply).setOnClickListener(this);
+        findViewById(R.id.divide).setOnClickListener(this);
+        findViewById(R.id.percent).setOnClickListener(this);
+        findViewById(R.id.delete_one_sign).setOnClickListener(this);
+        findViewById(R.id.delete_everything).setOnClickListener(this);
+
+        findViewById(R.id.radioButtonDefault).setOnClickListener(this);
+        findViewById(R.id.radioButtonRed).setOnClickListener(this);
+        findViewById(R.id.radioButtonGreen).setOnClickListener(this);
+        findViewById(R.id.radioButtonBlue).setOnClickListener(this);
     }
 
     @Override
@@ -43,7 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         screen.setText(savedInstanceState.getString(screenKey));
     }
 
-    public void numbers(View view) {
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
         String number = screen.getText().toString();
         switch (view.getId()) {
             case (R.id.zero):
@@ -83,8 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 number = "";
                 break;
             case (R.id.delete_one_sign):
-                String newNumber = number.substring(0, number.length() - 1);
-                number = newNumber;
+                number = number.substring(0, number.length() - 1);
                 break;
             case (R.id.percent):
                 number += "%";
@@ -106,11 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         screen.setText(number);
-    }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View view) {
         switch (view.getId()) {
             case (R.id.radioButtonDefault):
                 setAppTheme(R.style.Theme_Calculator);

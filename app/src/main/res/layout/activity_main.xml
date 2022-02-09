@@ -33,28 +33,24 @@
             android:id="@+id/delete_everything"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/delete_everything" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_one_sign"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/delete_one_sign" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/percent"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/percent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/divide"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/divide" />
 
     </LinearLayout>
@@ -73,28 +69,24 @@
             android:id="@+id/seven"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/seven" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/eight" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/nine" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/multiply" />
 
     </LinearLayout>
@@ -113,28 +105,24 @@
             android:id="@+id/four"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/four" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/five" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/six" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/plus"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/plus" />
 
     </LinearLayout>
@@ -153,28 +141,24 @@
             android:id="@+id/one"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/one" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/two" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/three" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/minus"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/minus" />
 
     </LinearLayout>
@@ -193,21 +177,18 @@
             android:id="@+id/zero"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/zero" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/point"
             style="@style/buttons"
             android:layout_weight="1"
-            android:onClick="numbers"
             android:text="@string/point" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/equals"
             style="@style/buttons"
             android:layout_weight="2"
-            android:onClick="numbers"
             android:text="@string/equals" />
 
     </LinearLayout>
